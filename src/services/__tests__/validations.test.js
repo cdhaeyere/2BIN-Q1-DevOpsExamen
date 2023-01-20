@@ -29,4 +29,19 @@ describe("validations tests suites - checkGamerTag", () => {
         const result = validation("aaaaaa#1");
         expect(result).toBe(true);
     });
+
+    test("should return false as the gamertag does not have 8 characters", () => {
+        const result = validation("aaaaaa#");
+        expect(result).toBe(false);
+    });
+
+    test("should return false as the gamertag does not have a special character", () => {
+        const result = validation("aaaaaa11");
+        expect(result).toBe(false);
+    });
+
+    test("should return false as the gamertag does not have a number", () => {
+        const result = validation("aaaaaaa#");
+        expect(result).toBe(false);
+    });
 });
