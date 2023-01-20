@@ -1,4 +1,4 @@
-const { isEmpty } = require("../validations");
+const { isEmpty, validation } = require("../validations");
 
 describe("validations tests suites - isEmpty", () => {
     test("should return true as the label is undefined", () => {
@@ -18,3 +18,10 @@ describe("validations tests suites - isEmpty", () => {
 });
 
 // TODO: Create tests suite for validation function
+
+describe("validations tests suites - checkGamerTag", () => {
+    test("should return false as the gamertag is undefined", () => {
+        const result = validation("");
+        expect(result).toBe(false);
+    });
+});
