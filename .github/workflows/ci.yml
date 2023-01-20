@@ -1,4 +1,4 @@
-name: DevOps 10 CI
+name: DevOps Examen CI
 
 on:
   pull_request:
