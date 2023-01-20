@@ -18,9 +18,9 @@ try {
             ? "Gamer tag cannot be empty"
             : "Gamer tag is valid";
         feedbackMessage.textContent = feedbackMessageText;
-        feedbackMessageText = validation(gamerTagValue) ?
-            "Gamer tag is valid" :
-            "Gamer tag is invalid";
+        feedbackMessageText = validation(gamerTagValue)
+            ? "Gamer tag is valid"
+            : "Gamer tag is invalid";
         feedbackMessage.textContent = feedbackMessageText;
     });
 } catch (err) {
