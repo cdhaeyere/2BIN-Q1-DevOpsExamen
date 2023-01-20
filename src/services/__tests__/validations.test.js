@@ -24,4 +24,9 @@ describe("validations tests suites - checkGamerTag", () => {
         const result = validation("");
         expect(result).toBe(false);
     });
+
+    test("should return true as the gamertag meets all the requirements", () => {
+        const result = validation("aaaaaa#1");
+        expect(result).toBe(true);
+    });
 });
