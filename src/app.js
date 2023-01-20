@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 try {
-    const { isEmpty } = require("./services/validations");
+    const { isEmpty, validation } = require("./services/validations");
     const gamerTagInput = document.getElementById("gamerTagInput");
     const checkButton = document.getElementById("gamerTagCheckButton");
     const feedbackMessage = document.getElementById("gamerTagFeedback");
@@ -17,6 +17,10 @@ try {
         feedbackMessageText = isEmpty(gamerTagValue)
             ? "Gamer tag cannot be empty"
             : "Gamer tag is valid";
+        feedbackMessage.textContent = feedbackMessageText;
+        feedbackMessageText = validation(gamerTagValue)
+            ? "Gamer tag is valid"
+            : "Gamer tag is invalid";
         feedbackMessage.textContent = feedbackMessageText;
     });
 } catch (err) {
